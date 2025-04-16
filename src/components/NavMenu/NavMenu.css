@@ -1,9 +1,10 @@
 .nav-menu {
-  background: linear-gradient(#f6cb44, #ee9837);
+  background: linear-gradient(#f6cb44, 80%, #ee9837);
   padding: 20px;
 }
 
 .nav-menu__link {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   gap: 5px;
