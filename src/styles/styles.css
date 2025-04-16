@@ -9,13 +9,19 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
   font-size: 1rem;
 }
 
-ol {
+ol,
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
