@@ -1,4 +1,5 @@
 import User from "../../types";
+import "./UserCard.css";
 
 interface UserCardProps {
   user: User;
@@ -9,9 +10,9 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
 
   return (
     <ol className="user-card">
-      <span>{UserNameAndSurname[0]}</span>
-      <span>{UserNameAndSurname[1]}</span>
-      <span>{user.role_name}</span>
+      <span className="user-card__detail">{UserNameAndSurname[0]}</span>
+      <span className="user-card__detail">{UserNameAndSurname[1]}</span>
+      <span className="user-card__detail">{user.role_name}</span>
     </ol>
   );
 };

@@ -27,7 +27,6 @@ class UsersClients implements UsersClientStructure {
 
     const users = responseBody.data.data;
 
-    console.log(users);
     return users;
   }
 }
