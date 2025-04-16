@@ -1,5 +1,6 @@
 import User from "../../types";
 import UserCard from "../UserCard/UserCard";
+import "./UsersList.css";
 
 interface UsersListProps {
   users: User[];
