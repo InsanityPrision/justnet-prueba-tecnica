@@ -1,9 +1,13 @@
 import Header from "../Header/Header";
+import NavMenu from "../NavMenu/NavMenu";
 
 const App: React.FC = () => {
   return (
     <>
-      <Header></Header>
+      <Header />
+      <main>
+        <NavMenu />
+      </main>
     </>
   );
 };

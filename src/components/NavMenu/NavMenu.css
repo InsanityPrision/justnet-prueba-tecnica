@@ -1,0 +1,14 @@
+.nav-menu {
+  background: linear-gradient(#f6cb44, #ee9837);
+  padding: 20px;
+}
+
+.nav-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-menu__text {
+  font-size: 1.3rem;
+}
