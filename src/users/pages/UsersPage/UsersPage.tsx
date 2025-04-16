@@ -1,21 +1,10 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect } from "react";
 import UsersList from "../../components/UsersList/UsersList";
+import useUsers from "../../hooks/useUsers";
 import "./UsersPage.css";
-import { usersClient } from "../../client/UsersClient";
-import User from "../../types";
 
 const UsersPage: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]);
-
-  const loadUsers = useCallback(async () => {
-    try {
-      const loadedUsers = await usersClient.getUsers();
-
-      setUsers(loadedUsers);
-    } catch {
-      throw new Error("Error loading Users");
-    }
-  }, []);
+  const { users, loadUsers } = useUsers();
 
   useEffect(() => {
     loadUsers();
