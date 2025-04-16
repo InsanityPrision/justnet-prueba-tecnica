@@ -1,5 +1,11 @@
+import Header from "../Header/Header";
+
 const App: React.FC = () => {
-  return <></>;
+  return (
+    <>
+      <Header></Header>
+    </>
+  );
 };
 
 export default App;
