@@ -1,3 +1,4 @@
+import { Outlet } from "react-router";
 import Header from "../Header/Header";
 import NavMenu from "../NavMenu/NavMenu";
 
@@ -7,6 +8,7 @@ const App: React.FC = () => {
       <Header />
       <main>
         <NavMenu />
+        <Outlet />
       </main>
     </>
   );
