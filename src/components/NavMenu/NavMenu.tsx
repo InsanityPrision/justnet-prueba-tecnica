@@ -4,7 +4,7 @@ import "./NavMenu.css";
 const NavMenu: React.FC = () => {
   return (
     <nav className="nav-menu">
-      <NavLink to="" className={"nav-menu__link"}>
+      <NavLink to="users" className={"nav-menu__link"}>
         <img
           src="./icons/user.svg"
           alt="Ir a usuarios"
