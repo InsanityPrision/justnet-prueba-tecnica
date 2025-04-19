@@ -1,0 +1,31 @@
+.user-detail-container {
+  border: 2px var(--border-color) solid;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 60%;
+  width: 60%;
+  background-color: #fff;
+}
+
+.user-detail {
+  font-weight: 600;
+}
+
+.user-information {
+  border: 2px var(--border-color) solid;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 300px;
+}
+
+.save-form {
+  color: #fff;
+  background-color: #313131;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
