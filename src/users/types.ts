@@ -1,8 +1,12 @@
-interface User {
+export interface User {
   id: number;
   name: string;
   email: string;
   role_name: string;
 }
 
-export default User;
+export interface Role {
+  id: number;
+  name: string;
+  key: string;
+}

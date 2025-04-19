@@ -1,4 +1,4 @@
-import User from "../types";
+import { User, Role } from "../types";
 import { UsersClientStructure } from "./types";
 
 if (!import.meta.env.VITE_API_REST_URL) {
@@ -7,6 +7,7 @@ if (!import.meta.env.VITE_API_REST_URL) {
 
 class UsersClients implements UsersClientStructure {
   private readonly apiRestUrl = import.meta.env.VITE_API_REST_URL;
+
   async getUsers(): Promise<User[]> {
     const response = await fetch(`${this.apiRestUrl}/users`);
 
@@ -28,6 +29,32 @@ class UsersClients implements UsersClientStructure {
     const users = responseBody.data.data;
 
     return users;
+  }
+
+  async getRoles(): Promise<Role[]> {
+    const response = await fetch(`${this.apiRestUrl}/roles/infinity`);
+
+    if (!response.ok) {
+      throw new Error("Failed fetching roles");
+    }
+
+    const responseBody = (await response.json()) as {
+      data: {
+        data: {
+          name: string;
+          key: string;
+          id: number;
+        }[];
+        page: number;
+        nextPage: null;
+        totalRecords: number;
+        totalPage: number;
+      };
+    };
+
+    const roles = responseBody.data.data;
+
+    return roles;
   }
 }
 

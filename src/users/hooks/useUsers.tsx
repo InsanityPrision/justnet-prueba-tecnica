@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { usersClient } from "../client/UsersClient";
-import User from "../types";
+import { User } from "../types";
 
 const useUsers = () => {
   const [users, setUsers] = useState<User[]>([]);
